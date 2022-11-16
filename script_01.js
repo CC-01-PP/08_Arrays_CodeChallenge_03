@@ -16,3 +16,29 @@ output(getSentence(["Ich","bin","Max"],"S"));
 output(getSentence(["Bist","du","Max"],"Q"));
 output(getSentence(["Ich","bin"],"E"));
 output(getSentence(["Ich","hätt","gern","die","Platt","von","dene","zwei","diwodaso","Spass","mache,"," habbe","Sie","die"],"Q"));
+
+function output(outputStr){
+    console.log(outputStr)
+}
+
+function getSentence(arr,p) {
+    const gap = " ";
+    let str = "";
+
+    for (let i = 0; i < arr.length; i++) {
+        str = str + arr[i] + gap;
+    }
+    str = str.trim()
+    return  str + punctuation(p);
+}
+
+function punctuation(p){
+    switch (p) {
+        case "Q": // question
+            return "?";
+        case "E": // exclamation 
+            return "!";
+        default: //sentence
+            return ".";
+    }
+}
