@@ -21,7 +21,7 @@ function output(outputStr){
     console.log(outputStr)
 }
 
-function getSentence(arr,p) {
+function getSentence(arr,punkt) {
     const gap = " ";
     let str = "";
 
@@ -29,16 +29,16 @@ function getSentence(arr,p) {
         str = str + arr[i] + gap;
     }
     str = str.trim()
-    return  str + punctuation(p);
+    return  str + punctuation(punkt);
 }
 
-function punctuation(p){
-    switch (p) {
-        case "Q": // question
+function punctuation(punkt){
+    switch (punkt) {
+        case "Q":
             return "?";
-        case "E": // exclamation 
+        case "E": 
             return "!";
-        default: //sentence
+        default:
             return ".";
     }
 }
