@@ -29,10 +29,10 @@ function getSentence(arr,punkt) {
         str = str + arr[i] + gap;
     }
     str = str.trim()
-    return  str + punctuation(punkt);
+    return  str + getPunkt(punkt);
 }
 
-function punctuation(punkt){
+function getPunkt(punkt){
     switch (punkt) {
         case "Q":
             return "?";
